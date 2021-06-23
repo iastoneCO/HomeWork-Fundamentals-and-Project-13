@@ -1,0 +1,24 @@
+---
+- name: Resize memory on Elk VM (Docker container)
+  hosts: Elk-server
+  remote_user: redadmin
+  become: true
+  tasks:
+  
+ # Use command module
+  - name: Increase virtual memory
+    command: sysctl -w vm.max_map_count=262144
+
+  # Use shell module
+  - name: Increase virtual memory on restart
+    shell: echo "vm.max_map_count=262144" >> /etc/sysctl.conf
+
+   
+   #use sysctl module
+  - name: use more memory
+    sysctl:
+      name: vm.max_nap_count
+      value: '262144'
+      state: present
+      reload: yes
+      
