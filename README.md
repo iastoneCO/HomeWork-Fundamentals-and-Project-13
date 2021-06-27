@@ -40,7 +40,7 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump-Box-Provisioner | Gateway  | 10.0.0.4   | Linux (Ubuntu)|
+| Jump-Box-Provisioner | Gateway  | 10.0.0.6   | Linux (Ubuntu)|
 | Web-1 (VM1)     |DVWA Container        |10.0.0.4 | Linux (Ubuntu)|
 | Web-2 (VM2) | DVWA Container     | 10.0.0.5|Linux (Ubuntu)|
 | Web-3 (VM3)|DVWA Container|10.0.0.7    |Linux (Ubuntu)|
@@ -52,7 +52,7 @@ The machines on the internal network are not exposed to the public Internet.
 
 Only the Jump-Box-Provisioner  machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 
-Jump-Box-Provisioner IP Addresses: 104.211.43.19
+Jump-Box:
 
 Machines within the network can only be accessed by Jump-Box (SSH Port 22).
 
@@ -62,11 +62,11 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box        | No       | 104.211.43.19 |
-| Web-1 (VM1)   | No       | 10.0.0.4           |
-|  Web-2 (VM2)  | No       | 10.0.0.5           |
-|  Web-3 (VM3)  | No       | 10.0.0.7           |
-|  Elk-Server       | No       | 40.70.5.58/10.5.0.5|
+| Jump Box      | No             | 104.211.43.19        |
+| Web-1 (VM1)   | No             | 10.0.0.4             |
+|  Web-2 (VM2)  | No             | 10.0.0.5             |
+|  Web-3 (VM3)  | No             | 10.0.0.7             |
+|  Elk-Server   | No             | 40.70.5.58/10.5.0.5  |
 
 ### Elk Configuration
 
